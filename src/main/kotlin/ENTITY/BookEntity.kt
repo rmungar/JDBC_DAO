@@ -1,3 +1,5 @@
 package org.example.ENTITY
 
-data class BookEntity(val Titulo:String, val Autor:String, val Año: Int)
+
+
+data class BookEntity(val id:Int?, val titulo:String, val autor:String, val year: Int)

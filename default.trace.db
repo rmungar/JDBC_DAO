@@ -1,0 +1,64 @@
+2024-05-10 13:20:45.284000+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE BOOKS (\000d\000aID INT PRIMARY KEY,\000d\000aTITLE VARCHAR(30),\000d\000aAUTHOR VARCHAR(30),\000d\000a[*]YEAR DATE\000d\000a)"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE BOOKS (\000d\000aID INT PRIMARY KEY,\000d\000aTITLE VARCHAR(30),\000d\000aAUTHOR VARCHAR(30),\000d\000a[*]YEAR DATE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE BOOKS (
+ID INT PRIMARY KEY,
+TITLE VARCHAR(30),
+AUTHOR VARCHAR(30),
+YEAR DATE
+) [42001-224]
+2024-05-10 13:22:24.580000+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE BOOKS(\000d\000a\000d\000a   ID INT PRIMARY KEY,\000d\000a\000d\000a   TITLE VARCHAR(50),\000d\000a\000d\000a   AUTHOR VARCHAR(50),\000d\000a\000d\000a   [*]YEAR INT\000d\000a)"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE BOOKS(\000d\000a\000d\000a   ID INT PRIMARY KEY,\000d\000a\000d\000a   TITLE VARCHAR(50),\000d\000a\000d\000a   AUTHOR VARCHAR(50),\000d\000a\000d\000a   [*]YEAR INT\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE BOOKS(
+
+   ID INT PRIMARY KEY,
+
+   TITLE VARCHAR(50),
+
+   AUTHOR VARCHAR(50),
+
+   YEAR INT
+) [42001-224]
+2024-05-10 13:23:03.597000+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE books (\000d\000a\000d\000a   id INT PRIMARY KEY,\000d\000a\000d\000a   title VARCHAR(50),\000d\000a\000d\000a   author VARCHAR(50),\000d\000a\000d\000a   [*]year INT\000d\000a)"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE books (\000d\000a\000d\000a   id INT PRIMARY KEY,\000d\000a\000d\000a   title VARCHAR(50),\000d\000a\000d\000a   author VARCHAR(50),\000d\000a\000d\000a   [*]year INT\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE books (
+
+   id INT PRIMARY KEY,
+
+   title VARCHAR(50),
+
+   author VARCHAR(50),
+
+   year INT
+) [42001-224]
+2024-05-15 13:28:03.968162+02:00 database: wrong user or password; user: "USER"
+org.h2.message.DbException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more
+2024-05-15 13:33:01.092326+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE BOOKS\000d\000a[*]CREATE TABLE BOOKS(ID INT NOT NULL AUTO_INCREMENT, TITLE VARCHAR(255), AUTHOR VARCHAR(255), RELEASEYEAR NUMBER)"
+Syntax error in SQL statement "DROP TABLE BOOKS\000d\000a[*]CREATE TABLE BOOKS(ID INT NOT NULL AUTO_INCREMENT, TITLE VARCHAR(255), AUTHOR VARCHAR(255), RELEASEYEAR NUMBER)"; SQL statement:
+DROP TABLE BOOKS
+CREATE TABLE BOOKS(ID INT NOT NULL AUTO_INCREMENT, TITLE VARCHAR(255), AUTHOR VARCHAR(255), RELEASEYEAR NUMBER) [42000-224]

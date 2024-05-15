@@ -1,8 +1,8 @@
-package org.example.DAO
+package org.example.SERVICES
 
 import org.example.ENTITY.BookEntity
 
-interface IBookDAO {
+interface IBookService {
     fun getBookById(bookID: Int): BookEntity?
     fun getAllBooks(): List<BookEntity>?
     fun createBook(book: BookEntity): BookEntity?
