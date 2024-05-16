@@ -16,7 +16,7 @@ class Console: IOutput {
 
     override fun askForDataSourceType(): DataSourceType? {
         try {
-            showMessage("Do you want to use a Database(1) or a File (2)", false)
+            showMessage("Do you want to use a Database(1) or a File (2) -> ", false)
             val decission = getMessage()
             if (decission.toInt() == 1) return DataSourceType.HIKARI
             else return DataSourceType.FILE

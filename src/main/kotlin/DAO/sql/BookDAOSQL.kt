@@ -49,7 +49,7 @@ class BookDAOSQL(private val console: IOutput): IBookDAO {
                                 id = (rs.getInt(1)),
                                 titulo = rs.getString(2),
                                 autor = rs.getString(3),
-                                year = rs.getDate(4),
+                                year = rs.getInt(4),
                             )
                         )
                     }
@@ -81,7 +81,7 @@ class BookDAOSQL(private val console: IOutput): IBookDAO {
                             id = rs.getInt(1),
                             autor = rs.getString(2),
                             titulo = rs.getString(3),
-                            year = rs.getDate(4)
+                            year = rs.getInt(4)
                         )
                     } else {
                         console.showMessage("-- ERROR AL OBTENER EL PRODUCTO --", true)

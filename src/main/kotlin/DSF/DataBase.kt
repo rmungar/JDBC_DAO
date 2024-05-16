@@ -6,7 +6,7 @@ import java.sql.SQLException
 
 object DataBase {
 
-    const val DB_URL = "jdbc:h2:file:C:\\Users\\usuario tarde\\ReposGit\\JDBC_DAO\\default.mv.db"
+    const val DB_URL = "jdbc:h2:file:C:\\Users\\usuario\\IdeaProjects\\JDBC_DAO\\default"
     const val USER = "user"
     const val PASS = "user"
 
